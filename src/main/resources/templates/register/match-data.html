@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>状況の登録</h2>
+    <form method="post" th:action="@{/register/pitch-data}" th:object="${matchDataForm}">
+<!--
+        <label>日程</label><br />
+        <input type="date" th:field="*{date}"/><br />
+        <br />
+-->
+        <label>打者</label><br />
+        <input type="text" th:field="*{batter}"/><br />
+        <br />
+        <label>投手</label><br />
+        <input type="text" th:field="*{pitcher}"/><br />
+        <br />
+
+        <!--
+        <label>アウトカウント</label><br />
+        <input type="radio" name="outcount" value="0" checked="checked">ノーアウト
+        <input type="radio" name="outcount" value="1">ワンアウト
+        <input type="radio" name="outcount" value="2">ツーアウト<br />
+        <br />
+        <label>ランナー</label><br />
+        <input type="checkbox" name="base" value="1">1塁
+        <input type="checkbox" name="base" value="2">2塁
+        <input type="checkbox" name="base" value="3">3塁<br />
+        <br />
+        -->
+
+        <input type="submit" value="登録">
+        <input type="button" value="戻る">
+    </form>
+</body>
+</html>
