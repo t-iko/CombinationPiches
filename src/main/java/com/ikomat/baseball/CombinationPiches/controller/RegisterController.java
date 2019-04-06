@@ -1,6 +1,5 @@
 package com.ikomat.baseball.CombinationPiches.controller;
 
-import com.ikomat.baseball.CombinationPiches.domain.model.MatchDataForm;
 import com.ikomat.baseball.CombinationPiches.domain.model.MatchInfo;
 import com.ikomat.baseball.CombinationPiches.domain.repositories.Dao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,9 @@ public class RegisterController {
     }
 
     @RequestMapping(value="/register/pitch-data", method = RequestMethod.POST)
-    public String postPitchData(@ModelAttribute MatchInfo form, Model model){
+    @Transactional
+    public String postPitchData(@ModelAttribute MatchInfo matchInfo, Model model){
+        test_dao.saveAndFlush(matchInfo);
         return "register/pitch-data";
     }
 

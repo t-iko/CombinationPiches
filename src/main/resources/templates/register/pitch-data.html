@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>投球情報</h2>
-    <form method="post" action="/register/pitch-data">
+    <form method="post" th:action="@{/register/pitch-data}" th:object="${matchInfo}">
         <label>X球目</label><br />
         <br />
         <label>打者</label><br />
