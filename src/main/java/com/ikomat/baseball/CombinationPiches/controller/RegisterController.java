@@ -20,12 +20,12 @@ public class RegisterController {
     private Dao test_dao;
 
     @RequestMapping(value="/register/match-data", method = RequestMethod.GET)
-    public String getMatchData(@ModelAttribute MatchDataForm matchDataForm, Model model){
+    public String getMatchData(@ModelAttribute MatchInfo matchDataForm, Model model){
         return "register/match-data";
     }
 
     @RequestMapping(value="/register/pitch-data", method = RequestMethod.POST)
-    public String postPitchData(@ModelAttribute MatchDataForm form, Model model){
+    public String postPitchData(@ModelAttribute MatchInfo form, Model model){
         return "register/pitch-data";
     }
 
