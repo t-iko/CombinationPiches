@@ -1,6 +1,7 @@
 package com.ikomat.baseball.CombinationPiches.domain.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="matchinfo")
@@ -16,6 +17,9 @@ public class MatchInfo {
 
     @Column(length = 30,nullable = true)
     private String pitcher;
+
+    @OneToMany
+    private List<SituationEntity> situationEntityList;
 
     public int getId(){
         return id;
@@ -41,4 +45,13 @@ public class MatchInfo {
     public void setPitcher(String pitcher){
         this.pitcher = pitcher;
     }
+
+    public List<SituationEntity> getSituationEntityList() {
+        return situationEntityList;
+    }
+
+    public void setSituationEntityList(List<SituationEntity> situationEntityList) {
+        this.situationEntityList = situationEntityList;
+    }
+
 }

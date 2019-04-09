@@ -1,7 +1,6 @@
 package com.ikomat.baseball.CombinationPiches.controller;
 
 
-import com.ikomat.baseball.CombinationPiches.domain.model.MatchDataForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
