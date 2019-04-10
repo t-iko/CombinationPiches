@@ -7,17 +7,17 @@
 </head>
 <body>
     <h2>状況の登録</h2>
-    <form method="post" th:action="@{/register/pitch-data}" th:object="${matchInfo}">
+    <form method="post" th:action="@{/register/pitch-data}">
 <!--
         <label>日程</label><br />
         <input type="date" th:field="*{date}"/><br />
         <br />
 -->
         <label>打者</label><br />
-        <input type="text" th:field="*{batter}"/><br />
+        <input type="text" th:field="${matchInfo.batter}"/><br />
         <br />
         <label>投手</label><br />
-        <input type="text" th:field="*{pitcher}"/><br />
+        <input type="text" th:field="${matchInfo.pitcher}"/><br />
         <br />
 
         <!--
