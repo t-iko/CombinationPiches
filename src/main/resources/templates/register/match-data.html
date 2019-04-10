@@ -19,6 +19,11 @@
         <label>投手</label><br />
         <input type="text" th:field="${matchInfo.pitcher}"/><br />
         <br />
+        <label>ランナー</label><br />
+        <input type="checkbox" th:field="${situation.firstbase}" th:value="true">1塁
+        <input type="checkbox" name="base" value="true">2塁
+        <input type="checkbox" name="base" value="3">3塁<br />
+        <br />
 
         <!--
         <label>アウトカウント</label><br />
@@ -26,11 +31,7 @@
         <input type="radio" name="outcount" value="1">ワンアウト
         <input type="radio" name="outcount" value="2">ツーアウト<br />
         <br />
-        <label>ランナー</label><br />
-        <input type="checkbox" name="base" value="1">1塁
-        <input type="checkbox" name="base" value="2">2塁
-        <input type="checkbox" name="base" value="3">3塁<br />
-        <br />
+
         -->
 
         <input type="submit" value="登録">
