@@ -1,6 +1,7 @@
 package com.ikomat.baseball.CombinationPiches.controller;
 
 import com.ikomat.baseball.CombinationPiches.domain.model.MatchInfo;
+import com.ikomat.baseball.CombinationPiches.domain.model.SituationEntity;
 import com.ikomat.baseball.CombinationPiches.domain.repositories.Dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,16 +20,22 @@ public class RegisterController {
     private Dao dao;
 
     @RequestMapping(value="/register/match-data", method = RequestMethod.GET)
-    public String getMatchData(@ModelAttribute MatchInfo matchDataForm, Model model){
+    public String getMatchData(@ModelAttribute MatchInfo matchInfo, Model model_mat, @ModelAttribute SituationEntity situationEntity, Model model_sit){
         return "register/match-data";
     }
 
     @RequestMapping(value="/register/pitch-data", method = RequestMethod.POST)
-    @Transactional
-    public String postPitchData(@ModelAttribute MatchInfo matchInfo, Model model){
-        dao.saveAndFlush(matchInfo);
+    public String postPitchData(@ModelAttribute MatchInfo matchInfo, Model model_mat, @ModelAttribute SituationEntity situationEntity, Model model_sit){
         return "register/pitch-data";
     }
+
+    //
+    //@RequestMapping(value="/register/pitch-data", method = RequestMethod.POST)
+    //@Transactional
+    //public String postPitchData(@ModelAttribute MatchInfo matchInfo, Model model_mat, @ModelAttribute SituationEntity situationEntity, Model model_sit){
+    //    dao.saveAndFlush(matchInfo);
+    //    return "register/pitch-data";
+    //}
 
     @RequestMapping(value="/test_connectdb", method = RequestMethod.GET)
     @Transactional

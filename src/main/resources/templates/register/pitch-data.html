@@ -15,7 +15,19 @@
         <br />
         <label>投手</label><br />
         <input type="text" th:field="${matchInfo.pitcher}"><br />
+        <label>スコアテスト</label><br />
+        <input type="text" th:field="${situationEntity.myscore}"><br />
         <br />
+        <label>アウトカウントテスト</label><br />
+        <input type="text" th:field="${situationEntity.outcount}"><br />
+        <br />
+        <label>ランナーテスト</label><br />
+        <input type="text" th:field="${situationEntity.firstbase}"><br />
+        <input type="text" th:field="${situationEntity.secondbase}"><br />
+        <br />
+        <br />
+        <label>イニングテスト</label><br />
+        <input type="text" th:field="${situationEntity.inning}"><br />
         <!--
         <label>アウトカウント</label><br />
         <input type="radio" name="outcount" value="0" checked="checked">ノーアウト

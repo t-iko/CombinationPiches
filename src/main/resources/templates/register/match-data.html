@@ -20,21 +20,21 @@
         <br />
         -->
         <label>スコア</label><br />
-        <input type="number" name="myscore" min="0" >-
-        <input type="number" name="opponetscore" min="0"><br />
+        <input type="number" th:field="${situationEntity.myscore}" min="0" >-
+        <input type="number" th:field="${situationEntity.opponetscore}" min="0"><br />
         <br />
         <label>アウトカウント</label><br />
-        <input type="radio" name="outcount" value="0" checked="checked">ノーアウト
-        <input type="radio" name="outcount" value="1">ワンアウト
-        <input type="radio" name="outcount" value="2">ツーアウト<br />
+        <input type="radio" th:field="${situationEntity.outcount}" value="0" checked="checked">ノーアウト
+        <input type="radio" th:field="${situationEntity.outcount}" value="1">ワンアウト
+        <input type="radio" th:field="${situationEntity.outcount}" value="2">ツーアウト<br />
         <br />
         <label>ランナー</label><br />
-        <input type="checkbox" name="firstbase" value="true">1塁
-        <input type="checkbox" name="secondbase" value="true">2塁
-        <input type="checkbox" name="thirdbase" value="true">3塁<br />
+        <input type="checkbox" th:field="${situationEntity.firstbase}" value="true">1塁
+        <input type="checkbox" th:field="${situationEntity.secondbase}" value="true">2塁
+        <input type="checkbox" th:field="${situationEntity.thirdbase}" value="true">3塁<br />
         <br />
         <label>イニング</label><br />
-        <select name="inning" size="5">
+        <select th:field="${situationEntity.inning}" size="5">
             <option value="1回表">1回表</option>
             <option value="1回裏">1回裏</option>
             <option value="2回表">2回表</option>
