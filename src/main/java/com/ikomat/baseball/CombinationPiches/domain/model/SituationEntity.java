@@ -30,6 +30,10 @@ public class SituationEntity {
     @Column
     private int opponetscore;
 
+
+    @Column
+    private String inning;
+
     @ManyToOne
     private MatchInfo matchInfo;
 
@@ -60,6 +64,11 @@ public class SituationEntity {
     public int getOpponetscore() {
         return opponetscore;
     }
+
+    public String getInning() {
+        return inning;
+    }
+
 
     public void setId(int id) {
         this.id = id;
@@ -96,4 +105,9 @@ public class SituationEntity {
     public void setMatchInfo(MatchInfo matchInfo) {
         this.matchInfo = matchInfo;
     }
+
+    public void setInning(String inning) {
+        this.inning = inning;
+    }
+
 }

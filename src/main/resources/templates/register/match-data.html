@@ -8,32 +8,71 @@
 <body>
     <h2>状況の登録</h2>
     <form method="post" th:action="@{/register/pitch-data}">
-<!--
-        <label>日程</label><br />
-        <input type="date" th:field="*{date}"/><br />
-        <br />
--->
         <label>打者</label><br />
         <input type="text" th:field="${matchInfo.batter}"/><br />
         <br />
         <label>投手</label><br />
         <input type="text" th:field="${matchInfo.pitcher}"/><br />
         <br />
-        <label>ランナー</label><br />
-        <input type="checkbox" th:field="${situation.firstbase}" th:value="true">1塁
-        <input type="checkbox" name="base" value="true">2塁
-        <input type="checkbox" name="base" value="3">3塁<br />
-        <br />
-
         <!--
+        <label>日程</label><br />
+        <input type="date" th:field="*{date}"/><br />
+        <br />
+        -->
+        <label>スコア</label><br />
+        <input type="number" name="myscore" min="0" >-
+        <input type="number" name="opponetscore" min="0"><br />
+        <br />
         <label>アウトカウント</label><br />
         <input type="radio" name="outcount" value="0" checked="checked">ノーアウト
         <input type="radio" name="outcount" value="1">ワンアウト
         <input type="radio" name="outcount" value="2">ツーアウト<br />
         <br />
-
-        -->
-
+        <label>ランナー</label><br />
+        <input type="checkbox" name="firstbase" value="true">1塁
+        <input type="checkbox" name="secondbase" value="true">2塁
+        <input type="checkbox" name="thirdbase" value="true">3塁<br />
+        <br />
+        <label>イニング</label><br />
+        <select name="inning" size="5">
+            <option value="1回表">1回表</option>
+            <option value="1回裏">1回裏</option>
+            <option value="2回表">2回表</option>
+            <option value="2回裏">2回裏</option>
+            <option value="3回表">3回表</option>
+            <option value="3回裏">3回裏</option>
+            <option value="4回表">4回表</option>
+            <option value="4回裏">4回裏</option>
+            <option value="5回表">5回表</option>
+            <option value="5回裏">5回裏</option>
+            <option value="6回表">6回表</option>
+            <option value="6回裏">6回裏</option>
+            <option value="7回表">7回表</option>
+            <option value="7回裏">7回裏</option>
+            <option value="8回表">8回表</option>
+            <option value="8回裏">8回裏</option>
+            <option value="9回表">9回表</option>
+            <option value="9回裏">9回裏</option>
+            <option value="10回表">10回表</option>
+            <option value="10回裏">10回裏</option>
+            <option value="11回表">11回表</option>
+            <option value="11回裏">11回裏</option>
+            <option value="12回表">12回表</option>
+            <option value="12回裏">12回裏</option>
+            <option value="13回表">13回表</option>
+            <option value="13回裏">13回裏</option>
+            <option value="14回表">14回表</option>
+            <option value="14回裏">14回裏</option>
+            <option value="15回表">15回表</option>
+            <option value="15回裏">15回裏</option>
+            <option value="16回表">16回表</option>
+            <option value="16回裏">16回裏</option>
+            <option value="17回表">17回表</option>
+            <option value="17回裏">17回裏</option>
+            <option value="18回表">18回表</option>
+            <option value="18回裏">18回裏</option>
+        </select>
+        <br /><br />
         <input type="submit" value="登録">
         <input type="button" value="戻る">
     </form>
