@@ -19,6 +19,7 @@ public class MatchInfo {
     private String pitcher;
 
     @OneToMany
+    @Column(nullable = true)
     private List<SituationEntity> situationEntityList;
 
     public int getId(){
