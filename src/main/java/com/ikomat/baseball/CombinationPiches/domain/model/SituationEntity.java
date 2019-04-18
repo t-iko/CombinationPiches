@@ -9,8 +9,8 @@ public class SituationEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column
-    private int id;
+    @Column(name = "situation_id")
+    private int situationId;
 
     @Column
     private int outcount;
@@ -30,15 +30,15 @@ public class SituationEntity {
     @Column
     private int opponetscore;
 
-
     @Column
     private String inning;
 
     @ManyToOne
-    private MatchInfo matchInfo;
+    @JoinColumn(name = "matchinfo_fk", referencedColumnName = "matchinfoId")
+    private MatchInfo matchInfoFK;
 
     public int getId() {
-        return id;
+        return situationId;
     }
 
     public int getOutcount() {
@@ -69,9 +69,12 @@ public class SituationEntity {
         return inning;
     }
 
+    public MatchInfo getMatchInfoFK() {
+        return matchInfoFK;
+    }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int situationId) {
+        this.situationId = situationId;
     }
 
     public void setOutcount(int outcount) {
@@ -98,16 +101,11 @@ public class SituationEntity {
         this.opponetscore = opponetscore;
     }
 
-    public MatchInfo getMatchInfo() {
-        return matchInfo;
-    }
-
-    public void setMatchInfo(MatchInfo matchInfo) {
-        this.matchInfo = matchInfo;
-    }
-
     public void setInning(String inning) {
         this.inning = inning;
     }
 
+    public void setMatchInfoFK(MatchInfo matchInfoFK) {
+        this.matchInfoFK = matchInfoFK;
+    }
 }

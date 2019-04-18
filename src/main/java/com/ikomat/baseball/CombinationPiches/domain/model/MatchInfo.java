@@ -10,7 +10,7 @@ public class MatchInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
-    private int id;
+    private int matchinfoId;
 
     @Column(length = 30,nullable = true)
     private String batter;
@@ -18,16 +18,15 @@ public class MatchInfo {
     @Column(length = 30,nullable = true)
     private String pitcher;
 
-    @OneToMany
-    @Column(nullable = true)
+    @OneToMany(mappedBy = "situationId")
     private List<SituationEntity> situationEntityList;
 
     public int getId(){
-        return id;
+        return matchinfoId;
     }
 
-    public void setId(int id){
-        this.id = id;
+    public void setId(int matchinfoId){
+        this.matchinfoId = matchinfoId;
     }
 
     public String getBatter(){
@@ -37,7 +36,6 @@ public class MatchInfo {
     public void setBatter(String batter){
         this.batter = batter;
     }
-
 
     public String getPitcher(){
         return pitcher;
