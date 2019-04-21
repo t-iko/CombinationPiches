@@ -17,8 +17,8 @@ import java.util.List;
 @Controller
 public class RegisterController {
 
-    //@Autowired
-    //private Dao dao;
+    @Autowired
+    private Dao dao;
 
     @Autowired
     private DaoSituationEntity daoSituationEntity;
@@ -31,7 +31,8 @@ public class RegisterController {
 
     @RequestMapping(value="/register/pitch-data", method = RequestMethod.POST)
     public String postPitchData(@ModelAttribute MatchInfo matchInfo, Model model_mat, @ModelAttribute SituationEntity situationEntity, Model model_sit){
-        //dao.saveAndFlush(matchInfo);
+        situationEntity.setMatchInfoFK(matchInfo);
+        dao.saveAndFlush(matchInfo);
         daoSituationEntity.saveAndFlush(situationEntity);
         return "register/pitch-data";
     }
