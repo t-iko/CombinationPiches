@@ -8,7 +8,14 @@ import java.util.List;
 public class SituationEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "situation_id_seq")
+    @SequenceGenerator(
+            name = "situation_id_seq",
+            sequenceName = "situation_id_seq",
+            initialValue = 1,
+            allocationSize = 1)
     @Column(name = "situation_id")
     private int situationId;
 

@@ -8,7 +8,14 @@ import java.util.List;
 public class MatchInfo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "matchinfo_id_seq")
+    @SequenceGenerator(
+            name = "matchinfo_id_seq",
+            sequenceName = "matchinfo_id_seq",
+            initialValue = 1,
+            allocationSize = 1)
     @Column
     private int matchinfoId;
 
