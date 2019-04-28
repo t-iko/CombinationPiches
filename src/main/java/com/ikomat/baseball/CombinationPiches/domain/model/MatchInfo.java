@@ -17,7 +17,7 @@ public class MatchInfo {
             initialValue = 1,
             allocationSize = 1)
     @Column
-    private int matchinfoId;
+    private long matchinfoId;
 
     @Column(length = 30,nullable = true)
     private String batter;
@@ -28,11 +28,11 @@ public class MatchInfo {
     @OneToMany(mappedBy = "situationId")
     private List<SituationEntity> situationEntityList;
 
-    public int getId(){
+    public long getId(){
         return matchinfoId;
     }
 
-    public void setId(int matchinfoId){
+    public void setId(long matchinfoId){
         this.matchinfoId = matchinfoId;
     }
 

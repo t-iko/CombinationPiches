@@ -17,7 +17,7 @@ public class SituationEntity {
             initialValue = 1,
             allocationSize = 1)
     @Column(name = "situation_id")
-    private int situationId;
+    private long situationId;
 
     @Column
     private int outcount;
@@ -44,7 +44,7 @@ public class SituationEntity {
     @JoinColumn(name = "matchinfo_fk", referencedColumnName = "matchinfoId")
     private MatchInfo matchInfoFK;
 
-    public int getId() {
+    public long getId() {
         return situationId;
     }
 
@@ -80,7 +80,7 @@ public class SituationEntity {
         return matchInfoFK;
     }
 
-    public void setId(int situationId) {
+    public void setId(long situationId) {
         this.situationId = situationId;
     }
 
