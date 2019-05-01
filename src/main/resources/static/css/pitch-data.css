@@ -1,3 +1,20 @@
-.zone {
-    border: 100px #ff0000 solid;
+#zone {
+
+    width:200px;
+    height:200px;
+}
+
+#zone #zone_win{
+    position: relative;
+    width:200px;
+    height:200px;
+}
+
+#zone #ball{
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  width:20px;
+  height:20px;
+  top: 0;
+  left: 0;
 }
