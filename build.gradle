@@ -17,7 +17,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	compile 'org.webjars:jquery'
+	compile 'org.webjars:jquery:3.2.1'
 	compile 'org.webjars:bootstrap'
 	compileOnly 'org.projectlombok:lombok'
 	compile 'mysql:mysql-connector-java'

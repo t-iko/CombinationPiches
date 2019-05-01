@@ -29,6 +29,11 @@ public class RegisterController {
         return "register/match-data";
     }
 
+    @RequestMapping(value="/register/pitch-data_new", method = RequestMethod.GET)
+    public String getPitchDataNew(@ModelAttribute MatchInfo matchInfo, Model model_mat, @ModelAttribute SituationEntity situationEntity, Model model_sit){
+        return "register/pitch-data_new";
+    }
+
     @RequestMapping(value="/register/pitch-data", method = RequestMethod.POST)
     public String postPitchData(@ModelAttribute MatchInfo matchInfo, Model model_mat, @ModelAttribute SituationEntity situationEntity, Model model_sit){
         situationEntity.setMatchInfoFK(matchInfo);
