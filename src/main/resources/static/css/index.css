@@ -1,0 +1,24 @@
+li {
+    list-style: none;
+}
+
+.header {
+    background-color: #26d0c9;
+    color: #fff;
+    height: 80px;
+    /*横幅を指定してあげるとheader-listがWindowを小さくしてもくずれない*/
+    width: 2000px;
+}
+
+.header-logo {
+  float: left;
+  font-size: 28px;
+  padding: 20px 40px;
+}
+
+.header-list a {
+  text-decoration: none;
+  color: #fff;
+  float: left;
+  padding: 33px 20px;
+}

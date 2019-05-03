@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"></meta>
+    <meta charset="UTF-8">
+    <title>配球データ管理：トップページ</title>
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
 </head>
 <body>
-    <!-- コンテンツ部分 -->
-<form method="get" th:action="@{/register/match-data}">
-    <input type="submit" value="登録">
-</form>
-    <input type="submit" value="閲覧">
+    <div class="header">
+        <div class="header-logo">配球データ管理</div>
+        <div class="header-list">
+                <a href="">本サービスについて</a>
+                <a href="register/match-data">データを登録する</a>
+                <a href="">データを閲覧する</a>
+        </div>
+    </div>
 </body>
 </html>

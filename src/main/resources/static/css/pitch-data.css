@@ -11,8 +11,8 @@
 }
 
 #zone #ball{
-  position: absolute;/*絶対配置*/
-  color: white;/*文字は白に*/
+  position: absolute;
+  color: white;
   width:20px;
   height:20px;
   top: 0;
